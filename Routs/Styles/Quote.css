@@ -1,0 +1,111 @@
+/* Basic reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* Container for both quote generator and quote of the day */
+.tool-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-direction: column;
+    padding: 2rem;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Title Styling */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #1C45C1;
+}
+
+/* Quote display box styling */
+.quote-display {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background-color: #1C45C1;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+/* Button container styling */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Button Styling */
+.btn {
+    padding: 1rem 2.5rem;
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #ffca28;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .tool-container {
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .quote-display {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .quote-display {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
